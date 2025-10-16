@@ -2,8 +2,8 @@ import subprocess
  
 terraform_code = """
 provider "github" {
-  token = "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"
-  owner = "khaolakkkkk"
+  token = ""
+  owner = ""
 }
  
 resource "github_repository" "repo" {
