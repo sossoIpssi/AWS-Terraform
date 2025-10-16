@@ -1,0 +1,10 @@
+provider "github" {
+  token = "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"
+  owner = "khaolakkkkk"
+}
+ 
+resource "github_repository" "test_repo" {
+  name        = "terraform-test-quick"
+  description = "test"
+  private     = false
+}
