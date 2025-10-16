@@ -1,0 +1,18 @@
+import subprocess
+ 
+terraform_code = """
+provider "github" {
+  token = "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"
+  owner = "khaolakkkkk"
+}
+ 
+resource "github_repository" "repo" {
+  name        = "terraform-python"
+  description = "Python"
+  private     = false
+}
+"""
+ 
+open("github.tf", "w").write(terraform_code)
+subprocess.run(["terraform", "init"])
+subprocess.run(["terraform", "apply", "-auto-approve"])
