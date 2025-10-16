@@ -8,3 +8,8 @@ resource "github_repository" "test_repo" {
   description = "test"
   private     = false
 }
+
+variable "test_repo" {
+  description = "variable"
+  type = "string"
+}
